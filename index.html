@@ -31,6 +31,7 @@
       <link rel="stylesheet" href="https://themewagon.github.io/Cycle/css/owl.carousel.min.css">
       <link rel="stylesoeet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
    </head>
    <body>
       <!-- header section start -->
@@ -38,7 +39,7 @@
       <!-- cycle section start -->
       <div class="cycle_section layout_padding">
          <div class="container">
-            <h2 class="cycle_taital" style="font-size: 36;">Luck Shoes & Clean</h2>
+            <h1 class="cycle_taital" style="font-size: 36;">Luck Shoes & Clean</h1>
                <div class="cycle_section_2 layout_padding">
                <div class="row">
                   <div class="col-md-6">
@@ -146,6 +147,8 @@
       <script src="https://themewagon.github.io/Cycle/js/bootstrap.bundle.min.js"></script>
       <script src="https://themewagon.github.io/Cycle/js/jquery-3.0.0.min.js"></script>
       <script src="https://themewagon.github.io/Cycle/js/plugin.js"></script>
+      <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
       <!-- sidebar -->
       <script src="https://themewagon.github.io/Cycle/js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="https://themewagon.github.io/Cycle/js/custom.js"></script>
@@ -168,5 +171,19 @@
              $("#navbarSupportedContent").toggleClass("nav-normal")
          })
       </script>
+         <script>
+   $(document).ready(function() {
+      $('.carousel').swipe({
+         swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+            if (direction === 'left') {
+               $(this).carousel('next');
+            } else if (direction === 'right') {
+               $(this).carousel('prev');
+            }
+         },
+         allowPageScroll: 'vertical',
+      });
+   });
+</script>
    </body>
 </html>
